@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import News from "./pages/News";
 import { ThemeContext } from "./context/ThemeContext";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -12,7 +13,7 @@ const App = () => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Navbar setArticles={setArticles}></Navbar>
       <Routes>
         <Route path="/" element={<News country='us' category='general'    
@@ -58,7 +59,7 @@ const App = () => {
           </Route>
 
        </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 export default App;
