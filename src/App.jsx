@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import News from "./pages/News";
 import { ThemeContext } from "./context/ThemeContext";
-import { HashRouter } from "react-router-dom";
 import { Routes, Route, HashRouter } from "react-router-dom";
 
 const App = () => {
