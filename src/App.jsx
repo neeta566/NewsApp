@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import News from "./pages/News";
 import { ThemeContext } from "./context/ThemeContext";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route,BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
