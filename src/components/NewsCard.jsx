@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 const NewsCard = ({ article }) => {
-    const{author,desscription,publishedAt,source,title,url,urlToImage}=article
+    const{author,desscription,publishedAt,source,title,url,image}=article
   return( 
   <div className="max-w-md max-auto bg-white dark:bg-gray-900 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
-    <img src={urlToImage} alt={title} className='w-full h-48 object-cover bg-gray-400' />
+    <img src={image} alt={title} className='w-full h-48 object-cover bg-gray-400' />
     <div className="p-4">
  <Link to={url}> 
 <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
@@ -11,7 +11,7 @@ const NewsCard = ({ article }) => {
 </h2>
     </Link> 
     <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-{desscription?.length >10 ? desscription.slice(0,100)+"....":desscription}
+{desscription?.length >100 ? desscription.slice(0,100)+"....":desscription}
     </p>
     <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
 <span>By {author || "Unknown"}</span>

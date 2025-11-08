@@ -4,16 +4,16 @@ import NewsCard from "../components/NewsCard";
 
 const News = ({country,category,articles, setArticles}) => {
   
-   //https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=2286cf3764b345a0bada55a66ed2cdc9
-   // 
+   //https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=2286cf3764b345a0bada55a66ed2cdc9   
+
+   //const res = await axios.get(` https://gnews.io/api/v4/top-headlines?country=${country}&category=${category}&apiKey= f69e53aa325514657cf2f0650b30d611`);
 
      const fetchAllNews = async()=>{
     try {
-      // const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=2286cf3764b345a0bada55a66ed2cdc9`)
 
-      const res = await axios.get(`https://api.allorigins.win/raw?url=${encodeURIComponent(
-  `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=2286cf3764b345a0bada55a66ed2cdc9`
-)}`);
+       // const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=2286cf3764b345a0bada55a66ed2cdc9`)
+      const res = await axios.get(` https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=${country}&max=10&apikey=f69e53aa325514657cf2f0650b30d611`);
+
       console.log(res.data.articles);
       setArticles(res.data.articles);
         } catch (error) {
