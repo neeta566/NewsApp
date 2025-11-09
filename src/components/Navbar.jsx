@@ -21,8 +21,8 @@ const handleSearch=async (e)=>{
     const search=e.target.value 
     try{
 
-       // const res=await axios.get(`https://newsapi.org/v2/everything?q=${search}&apiKey=2286cf3764b345a0bada55a66ed2cdc9&q=india `)
-       const res=await axios.get(`https://gnews.io/api/v4/everything?q=${search}&apiKey=f69e53aa325514657cf2f0650b30d611&q=india`)
+        const res=await axios.get(`https://newsapi.org/v2/everything?q=${search}&apiKey=2286cf3764b345a0bada55a66ed2cdc9&q=india `)
+       //const res=await axios.get(`https://gnews.io/api/v4/everything?q=${search}&apiKey=f69e53aa325514657cf2f0650b30d611&q=india`)
 
         setArticles(res.data.articles)
 
