@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 const NewsCard = ({ article }) => {
-    const{author,desscription,publishedAt,source,title,url,image}=article
+    const{author,desscription,publishedAt,source,title,url,urlToImage}=article
   return( 
   <div className="max-w-md max-auto bg-white dark:bg-gray-900 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
-    <img src={image} alt={title} className='w-full h-48 object-cover bg-gray-400' />
+    <img src={urlToImage} alt={title} className='w-full h-48 object-cover bg-gray-400' />
     <div className="p-4">
  <Link to={url}> 
 <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
